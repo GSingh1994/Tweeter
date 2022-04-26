@@ -36,6 +36,9 @@
     <!-- New tweet CSS -->
     <link rel="stylesheet" href="/styles/new-tweet.css" />
 
+    <!-- All-tweets CSS -->
+    <link rel="stylesheet" href="/styles/all-tweets.css" />
+
     <!-- External JS -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -56,7 +59,7 @@
       </div>
     </nav>
     <!-- Header -->
-    <header>
+    <header class="page-header">
       <div>
         <img src="/images/profile-hex.png" />
       </div>
@@ -66,16 +69,33 @@
     </header>
 
     <!-- Page-specific (main) content here -->
-    <main class="container">
+    <main class="container" id="main">
       <section class="new-tweet">
         <form method="POST" action="/tweets">
           <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>
-          <div class="submit">
+          <footer>
             <button type="submit">Tweet</button>
             <output name="counter" class="counter" for="tweet-text">140</output>
-          </div>
+          </footer>
         </form>
+      </section>
+      <section class="all-tweets">
+        <article class="tweet">
+          <header>
+            <div class="user">
+              <img src="https://khanhicetea.com/static/images/notion-style-avatar.png" alt="avatar of user" />
+              <div class="user-name">Newton</div>
+            </div>
+            <span class="user-handle">@Newton46</span>
+          </header>
+          <p>Lorem ipsum dolor sit aiepellendus et minus doloremque veniam</p>
+          <hr />
+          <footer>
+            <div class="time">10 days ago</div>
+            <div class="icon-tray"><i class="fa-solid fa-flag"></i><i class="fa-solid fa-retweet"></i><i class="fa-solid fa-heart"></i></div>
+          </footer>
+        </article>
       </section>
     </main>
   </body>
