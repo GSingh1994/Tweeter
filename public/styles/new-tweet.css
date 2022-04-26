@@ -19,14 +19,14 @@ section textarea {
   font-weight: 600;
 }
 
-section .submit {
+section footer {
   padding-top: 1rem;
   display: flex;
   justify-content: space-between;
   font-family: 'Bungee', cursive;
 }
 
-.submit button {
+footer button {
   background-color: #4152a1;
   color: #f4f1ec;
   font-family: 'Bungee', cursive;
