@@ -57,15 +57,14 @@
       <div>
         <img src="/images/profile-hex.png" />
       </div>
-      <br />
       <div>
-        <h2>Your Name</h2>
+        <h2 class="name">Your <span>Name</span></h2>
       </div>
     </header>
 
     <!-- Page-specific (main) content here -->
     <main class="container">
-      <section class="new-tweet">
+      <section>
         <form method="POST" action="/tweets">
           <label for="tweet-text">What are you humming about?</label>
           <textarea name="text" id="tweet-text"></textarea>
