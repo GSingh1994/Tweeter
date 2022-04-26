@@ -31,3 +31,7 @@ section .submit {
   color: #f4f1ec;
   font-family: 'Bungee', cursive;
 }
+
+.red-counter {
+  color: #f55353;
+}
