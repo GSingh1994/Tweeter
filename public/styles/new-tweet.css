@@ -1,16 +1,16 @@
-.new-tweet form {
+section form {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   margin-top: 4rem;
 }
 
-.new-tweet label {
+section label {
   font-weight: 600;
   padding-bottom: 0.5rem;
 }
 
-.new-tweet textarea {
+section textarea {
   outline: none;
   border: none;
   background-color: #f4f1ec;
@@ -19,7 +19,7 @@
   font-weight: 600;
 }
 
-.new-tweet .submit {
+section .submit {
   padding-top: 1rem;
   display: flex;
   justify-content: space-between;
@@ -29,4 +29,5 @@
 .submit button {
   background-color: #4152a1;
   color: #f4f1ec;
+  font-family: 'Bungee', cursive;
 }
