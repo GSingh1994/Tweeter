@@ -1,0 +1,32 @@
+.new-tweet form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 4rem;
+}
+
+.new-tweet label {
+  font-weight: 600;
+  padding-bottom: 0.5rem;
+}
+
+.new-tweet textarea {
+  outline: none;
+  border: none;
+  background-color: #f4f1ec;
+  resize: none;
+  border-bottom: 3px solid #545149;
+  font-weight: 600;
+}
+
+.new-tweet .submit {
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Bungee', cursive;
+}
+
+.submit button {
+  background-color: #4152a1;
+  color: #f4f1ec;
+}
