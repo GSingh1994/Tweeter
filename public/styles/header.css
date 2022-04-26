@@ -1,11 +1,19 @@
 header {
-  height: 520px;
   width: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   background-color: #d89820;
   background-image: url('../images/black-orchid.png');
-  padding-top: 120px;
+  padding-top: 130px;
+  position: relative;
+  z-index: 1;
+}
+
+.name {
+  color: #ffffff;
+}
+
+.name span {
+  font-weight: 300;
 }
