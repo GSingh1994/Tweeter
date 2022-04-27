@@ -51,5 +51,9 @@ $().ready(() => {
     });
   };
 
+  $('#tweet-form').submit((event) => {
+    event.preventDefault();
+  });
+
   renderTweets(data);
 });
