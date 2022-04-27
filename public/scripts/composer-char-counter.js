@@ -4,12 +4,12 @@ $().ready(() => {
     let wordLimit = 140;
     let $counter = $(this).parent().find('.counter');
 
-    if (parseInt($counter.val()) <= 0) {
-      $counter.addClass('red-counter');
-    }
-
     //decrease counter on every char.
     wordLimit -= $(this).val().length;
-    return $counter.val(wordLimit);
+    $counter.val(wordLimit);
+
+    if (parseInt($counter.val()) < 1) {
+      $counter.addClass('red-counter');
+    }
   });
 });
