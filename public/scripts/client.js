@@ -1,5 +1,6 @@
 $().ready(() => {
   const createTweetElement = (tweetData) => {
+    const formatDate = timeago.format(tweetData.created_at);
     // return tweet article
     return $(`
     <article class="tweet">
@@ -13,7 +14,7 @@ $().ready(() => {
       <p class="content">${tweetData.content.text}</p>
       <hr />
       <footer>
-        <div class="time">${tweetData.created_at}</div>
+        <div class="time">${formatDate}</div>
         <div class="icon-tray"><i class="fa-solid fa-flag"></i><i class="fa-solid fa-retweet"></i><i class="fa-solid fa-heart"></i></div>
       </footer>
     </article>`);
