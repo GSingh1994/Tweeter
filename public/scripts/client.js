@@ -22,7 +22,7 @@ $().ready(() => {
 
   const renderTweets = (tweets) => {
     tweets.map((tweet) => {
-      $('#tweets-container').append(createTweetElement(tweet));
+      $('#tweets-container').prepend(createTweetElement(tweet));
     });
   };
 
@@ -31,12 +31,15 @@ $().ready(() => {
 
     // validate data before posting
     const tweetValue = $('#tweet-text').val().trim();
-    if (tweetValue === '' || tweetValue === null || tweetValue.length === 0) {
+    if (tweetValue === null || tweetValue.length === 0) {
       return alert("Tweet can't be empty");
     }
 
     const data = $(this).serialize();
-    $.post('/tweets', data);
+    $.post('/tweets', data).then(() => {
+      e.target.reset();
+      loadTweets();
+    });
   });
 
   const loadTweets = () => {
