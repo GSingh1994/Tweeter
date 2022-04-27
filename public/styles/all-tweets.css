@@ -35,7 +35,8 @@ section .tweet:hover {
 }
 
 hr {
-  border: 2px solid #545149;
+  border: none;
+  border-bottom: 3px solid #545149;
 }
 
 .tweet footer {
