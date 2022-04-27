@@ -8,7 +8,11 @@ $().ready(() => {
     wordLimit -= $(this).val().length;
     $counter.val(wordLimit);
 
-    if (parseInt($counter.val()) < 1) {
+    // hide error message if any
+    $('#error-msg').slideUp('slow');
+    $counter.removeClass('red-counter');
+
+    if (parseInt($counter.val()) < 0) {
       $counter.addClass('red-counter');
     }
   });
