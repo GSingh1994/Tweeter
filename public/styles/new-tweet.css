@@ -1,8 +1,11 @@
+.new-tweet {
+  margin-top: 3rem;
+}
+
 section form {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-top: 4rem;
 }
 
 section label {
@@ -34,4 +37,19 @@ footer button {
 
 .red-counter {
   color: #f55353;
+}
+
+#error-msg {
+  display: none;
+  width: 80%;
+  background-color: #ffffff;
+  padding: 16px;
+  border: 1px solid #eee;
+  border-left-width: 5px;
+  border-radius: 3px;
+  margin: 20px auto;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  border-left-color: #d9534f;
+  background-color: rgba(217, 83, 79, 0.1);
 }
