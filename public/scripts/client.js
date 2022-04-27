@@ -38,10 +38,13 @@ $().ready(() => {
     e.preventDefault();
 
     // validate data before posting
-    const tweetValue = $('#tweet-text').val().trim();
+    let tweetValue = $('#tweet-text').val().trim();
     if (tweetValue === null || tweetValue.length === 0) {
-      return alert("Tweet can't be empty");
+      return $('#error-msg').text('Please write something.').slideDown('slow');
+    } else if (tweetValue.length > 140) {
+      return $('#error-msg').text('Too long! Please limit your chars to 140').slideDown('slow');
     }
+
     const data = $(this).serialize();
     $.post('/tweets', data).then(() => {
       e.target.reset();
