@@ -28,6 +28,13 @@ $().ready(() => {
 
   $('#tweet-form').submit(function (e) {
     e.preventDefault();
+
+    // validate data before posting
+    const tweetValue = $('#tweet-text').val().trim();
+    if (tweetValue === '' || tweetValue === null || tweetValue.length === 0) {
+      return alert("Tweet can't be empty");
+    }
+
     const data = $(this).serialize();
     $.post('/tweets', data);
   });
