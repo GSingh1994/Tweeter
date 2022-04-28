@@ -40,9 +40,9 @@ $().ready(() => {
     // validate data before posting
     let tweetValue = $('#tweet-text').val().trim();
     if (tweetValue === null || tweetValue.length === 0) {
-      return $('#error-msg').text('Please write something.').slideDown('slow');
+      return $('#error-msg').text('Please write something.').slideDown('fast');
     } else if (tweetValue.length > 140) {
-      return $('#error-msg').text('Too long! Please limit your chars to 140').slideDown('slow');
+      return $('#error-msg').text('Too long! Please limit your chars to 140').slideDown('fast');
     }
 
     const data = $(this).serialize();
@@ -50,6 +50,7 @@ $().ready(() => {
       e.target.reset();
       loadTweets();
     });
+    $('.new-tweet').slideToggle('fast');
   });
 
   const loadTweets = () => {
@@ -58,4 +59,10 @@ $().ready(() => {
     });
   };
   loadTweets();
+
+  //form slide animation on click
+  $('#write-tweet').on('click', () => {
+    $('.new-tweet').slideToggle('fast');
+    $('#tweet-text').focus();
+  });
 });
