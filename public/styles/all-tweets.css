@@ -30,8 +30,9 @@ section .tweet:hover {
   width: 60px;
 }
 
-.tweet p {
+.tweet .content {
   font-weight: 600;
+  overflow-wrap: break-word;
 }
 
 hr {
