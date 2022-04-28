@@ -4,16 +4,21 @@
   flex-direction: column;
   align-items: center;
   background-color: #d89820;
-  background-image: url('../images/black-orchid.png');
+  background-image: url("../images/black-orchid.png");
   padding-top: 130px;
   position: relative;
   z-index: 1;
 }
-
 .page-header .name {
   color: #ffffff;
 }
-
-.name span {
+.page-header .name span {
   font-weight: 300;
+}
+
+@media only screen and (min-width: 1024px) {
+  .page-header {
+    padding-top: 30px;
+    border-radius: 5px;
+  }
 }

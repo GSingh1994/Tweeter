@@ -3,55 +3,48 @@ section .tweet {
   margin-top: 4rem;
   padding: 1rem;
 }
-
 section .tweet:hover {
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22);
 }
-
-.tweet header {
+section .tweet header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 0.5rem 1rem 0.5rem;
 }
-
-.tweet .user-handle {
+section .tweet .user-handle {
   color: #c5cbe3;
   font-weight: 600;
 }
-
-.tweet .user {
+section .tweet .user {
   display: flex;
   align-items: center;
   gap: 10px;
 }
-
-.tweet img {
+section .tweet img {
   width: 60px;
 }
-
-.tweet .content {
+section .tweet .content {
   font-weight: 600;
   overflow-wrap: break-word;
 }
-
-hr {
+section .tweet hr {
   border: none;
   border-bottom: 3px solid #545149;
 }
-
-.tweet footer {
+section .tweet footer {
   font-size: 1rem;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
   font-weight: 600;
   padding-top: 0;
+  display: flex;
+  justify-content: space-between;
 }
-
-.tweet .icon-tray {
+section .tweet .icon-tray {
   display: flex;
   gap: 0.5rem;
-  color: #49569c;
+  color: #4056a1;
 }
-.icon-tray i:hover {
-  color: #ca9824;
+section .tweet .icon-tray i:hover {
+  color: #d89820;
 }

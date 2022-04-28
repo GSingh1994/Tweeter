@@ -1,11 +1,7 @@
-/*
- * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
- * https://css-tricks.com/international-box-sizing-awareness-day/
- * Do not modify these two selectors, please
- */
 html {
   box-sizing: border-box;
 }
+
 *,
 *:before,
 *:after {
@@ -15,12 +11,11 @@ html {
 /*
  * Global layout stuff
  */
-
 body {
   color: #545149;
   background-color: #f4f1ec;
   font-size: 24px;
-  font-family: 'Source Sans Pro', sans-serif;
+  font-family: "Source Sans Pro", sans-serif;
 }
 
 .container {
@@ -29,6 +24,21 @@ body {
   background-color: #f4f1ec;
 }
 
+@media only screen and (min-width: 1024px) {
+  #flex-container {
+    display: flex;
+    align-items: flex-start;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 8rem;
+    gap: 10rem;
+  }
+  #flex-container .page-header {
+    margin-top: 65px;
+    width: 40%;
+    min-width: 30%;
+  }
+}
 #to-top {
   padding: 5px 3px;
   position: fixed;
@@ -39,13 +49,12 @@ body {
 }
 #to-top .fa-circle-arrow-up {
   color: #ef3c1f;
-  background-color: #383838;
+  background-color: #545149;
   border-radius: 50%;
   transition: all ease 0.3s;
 }
-
 #to-top .fa-circle-arrow-up:hover {
   cursor: pointer;
-  color: #383838;
+  color: #545149;
   background-color: #ef3c1f;
 }
