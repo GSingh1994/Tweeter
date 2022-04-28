@@ -29,6 +29,10 @@ nav #write-tweet {
   transition: all 0.3s ease;
 }
 
+#write-tweet span:hover {
+  cursor: pointer;
+}
+
 nav .fa-angles-down {
   transition: all 0.3s ease;
   color: #ef3c1f;
