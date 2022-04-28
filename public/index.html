@@ -62,31 +62,35 @@
         <i class="fa-solid fa-angles-down"></i>
       </div>
     </nav>
-    <!-- Header -->
-    <header class="page-header">
-      <div>
-        <img src="/images/profile-hex.png" />
-      </div>
-      <div>
-        <h2 class="name">Your <span>Name</span></h2>
-      </div>
-    </header>
 
-    <!-- Page-specific (main) content here -->
-    <main class="container" id="main">
-      <section class="new-tweet">
-        <div id="error-msg"></div>
-        <form id="tweet-form" method="POST" action="/tweets">
-          <label for="tweet-text">What are you humming about?</label>
-          <textarea name="text" id="tweet-text"></textarea>
-          <footer>
-            <button type="submit">Tweet</button>
-            <output name="counter" class="counter" for="tweet-text">140</output>
-          </footer>
-        </form>
-      </section>
-      <section id="tweets-container"></section>
-    </main>
+    <!-- flex-container helps to change layout on big screens -->
+    <div id="flex-container">
+      <!-- Header -->
+      <header class="page-header">
+        <div>
+          <img src="/images/profile-hex.png" />
+        </div>
+        <div>
+          <h2 class="name">Gagan <span>Singh</span></h2>
+        </div>
+      </header>
+
+      <!-- Page-specific (main) content here -->
+      <main class="container" id="main">
+        <section class="new-tweet">
+          <div id="error-msg"></div>
+          <form id="tweet-form" method="POST" action="/tweets">
+            <label for="tweet-text">What are you humming about?</label>
+            <textarea rows="3" name="text" id="tweet-text"></textarea>
+            <footer>
+              <button type="submit">Tweet</button>
+              <output name="counter" class="counter" for="tweet-text">140</output>
+            </footer>
+          </form>
+        </section>
+        <section id="tweets-container"></section>
+      </main>
+    </div>
     <div id="to-top"><i class="fa-solid fa-circle-arrow-up"></i></div>
   </body>
 </html>
