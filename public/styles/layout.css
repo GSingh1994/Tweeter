@@ -48,13 +48,13 @@ body {
   font-size: 3rem;
 }
 #to-top .fa-circle-arrow-up {
-  color: #ef3c1f;
-  background-color: #545149;
+  color: #d89820;
+  background-color: #ef3c1f;
   border-radius: 50%;
   transition: all ease 0.3s;
 }
 #to-top .fa-circle-arrow-up:hover {
   cursor: pointer;
-  color: #545149;
-  background-color: #ef3c1f;
+  color: #ef3c1f;
+  background-color: #d89820;
 }

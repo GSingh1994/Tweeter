@@ -52,14 +52,14 @@ body {
   display: none;
   font-size: 3rem;
   .fa-circle-arrow-up {
-    color: $secondary-color;
-    background-color: $primary-color;
+    color: $tertiary-color;
+    background-color: $secondary-color;
     border-radius: 50%;
     transition: all ease 0.3s;
     &:hover {
       cursor: pointer;
-      color: $primary-color;
-      background-color: $secondary-color;
+      color: $secondary-color;
+      background-color: $tertiary-color;
     }
   }
 }
