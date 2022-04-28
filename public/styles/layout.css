@@ -28,3 +28,24 @@ body {
   margin: 0 auto;
   background-color: #f4f1ec;
 }
+
+#to-top {
+  padding: 5px 3px;
+  position: fixed;
+  bottom: 0;
+  right: 5px;
+  display: none;
+  font-size: 3rem;
+}
+#to-top .fa-circle-arrow-up {
+  color: #ef3c1f;
+  background-color: #383838;
+  border-radius: 50%;
+  transition: all ease 0.3s;
+}
+
+#to-top .fa-circle-arrow-up:hover {
+  cursor: pointer;
+  color: #383838;
+  background-color: #ef3c1f;
+}
