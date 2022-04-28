@@ -59,10 +59,4 @@ $().ready(() => {
     });
   };
   loadTweets();
-
-  //form slide animation on click
-  $('#write-tweet').on('click', () => {
-    $('.new-tweet').slideToggle('fast');
-    $('#tweet-text').focus();
-  });
 });
