@@ -26,6 +26,23 @@ body {
   background-color: $white;
 }
 
+@media only screen and (min-width: 1024px) {
+  #flex-container {
+    display: flex;
+    align-items: flex-start;
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 8rem;
+    gap: 10rem;
+
+    .page-header {
+      margin-top: 65px;
+      width: 40%;
+      min-width: 30%;
+    }
+  }
+}
+
 // move to top btn
 #to-top {
   padding: 5px 3px;
