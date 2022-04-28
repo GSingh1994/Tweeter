@@ -17,12 +17,42 @@ nav .logo {
   font-size: 1.5em;
 }
 
-nav .write-tweet {
+nav #write-tweet {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+#write-tweet span {
+  user-select: none;
+  padding: 0.5rem;
+  transition: all 0.3s ease;
+}
+
 nav .fa-angles-down {
+  transition: all 0.3s ease;
   color: #ef3c1f;
+  animation: swing 2s ease;
+  animation-iteration-count: infinite;
+}
+
+@keyframes swing {
+  15% {
+    transform: translateY(3px);
+  }
+  30% {
+    transform: translateY(-3px);
+  }
+  50% {
+    transform: translateY(2px);
+  }
+  65% {
+    transform: translateY(-2px);
+  }
+  80% {
+    transform: translateY(2px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
