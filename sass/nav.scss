@@ -62,3 +62,10 @@ nav {
     transform: translateY(0);
   }
 }
+
+@media only screen and (min-width: 768px) {
+  nav {
+    background-color: $blue;
+    padding: 0 1.5rem;
+  }
+}
