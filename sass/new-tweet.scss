@@ -1,0 +1,56 @@
+.new-tweet {
+  margin-top: 3rem;
+  display: none;
+}
+
+section form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+section label {
+  font-weight: 600;
+  padding-bottom: 0.5rem;
+}
+
+section textarea {
+  outline: none;
+  border: none;
+  background-color: #f4f1ec;
+  resize: none;
+  border-bottom: 3px solid #545149;
+  font-weight: 600;
+}
+
+section footer {
+  padding-top: 1rem;
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Bungee', cursive;
+}
+
+footer button {
+  background-color: #4152a1;
+  color: #f4f1ec;
+  font-family: 'Bungee', cursive;
+}
+
+.red-counter {
+  color: #f55353;
+}
+
+#error-msg {
+  display: none;
+  width: 80%;
+  background-color: #ffffff;
+  padding: 16px;
+  border: 1px solid #eee;
+  border-left-width: 5px;
+  border-radius: 3px;
+  margin: 20px auto;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  border-left-color: #d9534f;
+  background-color: rgba(217, 83, 79, 0.1);
+}
