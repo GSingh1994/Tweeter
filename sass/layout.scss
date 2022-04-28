@@ -1,8 +1,5 @@
-/*
- * http://www.paulirish.com/2012/box-sizing-border-box-ftw/
- * https://css-tricks.com/international-box-sizing-awareness-day/
- * Do not modify these two selectors, please
- */
+@import 'variables';
+
 html {
   box-sizing: border-box;
 }
@@ -17,8 +14,8 @@ html {
  */
 
 body {
-  color: #545149;
-  background-color: #f4f1ec;
+  color: $primary-color;
+  background-color: $white;
   font-size: 24px;
   font-family: 'Source Sans Pro', sans-serif;
 }
@@ -26,9 +23,10 @@ body {
 .container {
   width: 90%;
   margin: 0 auto;
-  background-color: #f4f1ec;
+  background-color: $white;
 }
 
+// move to top btn
 #to-top {
   padding: 5px 3px;
   position: fixed;
@@ -36,16 +34,15 @@ body {
   right: 5px;
   display: none;
   font-size: 3rem;
-}
-#to-top .fa-circle-arrow-up {
-  color: #ef3c1f;
-  background-color: #383838;
-  border-radius: 50%;
-  transition: all ease 0.3s;
-}
-
-#to-top .fa-circle-arrow-up:hover {
-  cursor: pointer;
-  color: #383838;
-  background-color: #ef3c1f;
+  .fa-circle-arrow-up {
+    color: $secondary-color;
+    background-color: $primary-color;
+    border-radius: 50%;
+    transition: all ease 0.3s;
+    &:hover {
+      cursor: pointer;
+      color: $primary-color;
+      background-color: $secondary-color;
+    }
+  }
 }
