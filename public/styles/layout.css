@@ -22,6 +22,7 @@ body {
   width: 90%;
   margin: 0 auto;
   background-color: #f4f1ec;
+  margin-bottom: 4rem;
 }
 
 @media only screen and (min-width: 1024px) {
