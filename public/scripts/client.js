@@ -29,6 +29,8 @@ $().ready(() => {
   };
 
   const renderTweets = (tweets) => {
+    //empty old tweets object to avoid duplication
+    $('#tweets-container').text('');
     tweets.map((tweet) => {
       $('#tweets-container').prepend(createTweetElement(tweet));
     });
@@ -55,6 +57,7 @@ $().ready(() => {
 
   const loadTweets = () => {
     $.ajax('/tweets', { method: 'GET' }).then((tweetData) => {
+      // console.log(tweetData);
       renderTweets(tweetData);
     });
   };
