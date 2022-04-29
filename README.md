@@ -4,9 +4,15 @@ Tweeter is a simple, single-page Twitter clone made by using HTML, CSS, JS, jQue
 
 ## Final Product
 
+<p align="center">
+
 !["Homepage"](https://raw.githubusercontent.com/GSingh1994/Tweeter/master/docs/tweeter-main.png)
-!["Form to write and post tweets"](https://raw.githubusercontent.com/GSingh1994/Tweeter/master/docs/tweeter-form.png)
+
+<hr/>
+
 !["List of tweets"](https://raw.githubusercontent.com/GSingh1994/Tweeter/master/docs/tweeter-posts.png)
+
+</p>
 
 ## Getting Started
 
