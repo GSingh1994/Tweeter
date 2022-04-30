@@ -1,15 +1,52 @@
 $().ready(() => {
-  //escape chars to prevent XSS attack
-  const escape = (str) => {
-    let div = document.createElement('div');
-    div.appendChild(document.createTextNode(str));
-    return div.innerHTML;
-  };
+  $('#tweet-form').submit(handleSubmit);
 
-  const createTweetElement = (tweetData) => {
-    const formatDate = timeago.format(tweetData.created_at);
-    // return tweet article
-    return $(`
+  //load old tweets on startup
+  loadTweets();
+});
+
+const handleSubmit = function (e) {
+  e.preventDefault();
+
+  // validate data before posting
+  if (validateData()) return;
+
+  const data = $(this).serialize();
+  submitData(data, e);
+
+  $('.new-tweet').slideToggle('fast');
+};
+
+const validateData = () => {
+  const $tweetValue = $('#tweet-text').val().trim();
+  const $errorMessage = $('#error-msg');
+
+  if ($tweetValue === null || $tweetValue.length === 0) {
+    return $errorMessage.text('Please write something.').slideDown('fast');
+  } else if ($tweetValue.length > 140) {
+    return $errorMessage.text('Too long! Please limit your chars to 140').slideDown('fast');
+  }
+  return false;
+};
+
+const submitData = (data, event) => {
+  $.post('/tweets', data).then(() => {
+    event.target.reset();
+    loadTweets();
+  });
+};
+
+//escape chars to prevent XSS attack
+const escapeChars = (str) => {
+  let div = document.createElement('div');
+  div.appendChild(document.createTextNode(str));
+  return div.innerHTML;
+};
+
+const createTweetElement = (tweetData) => {
+  const formatDate = timeago.format(tweetData.created_at);
+  // return tweet article
+  return $(`
       <article class="tweet">
         <header>
           <div class="user">
@@ -18,7 +55,7 @@ $().ready(() => {
           </div>
           <span class="user-handle">${tweetData.user.handle}</span>
         </header>
-        <p class="content">${escape(tweetData.content.text)}</p>
+        <p class="content">${escapeChars(tweetData.content.text)}</p>
         <hr />
         <footer>
           <div class="time">${formatDate}</div>
@@ -26,40 +63,19 @@ $().ready(() => {
         </footer>
       </article>
     `);
-  };
+};
 
-  const renderTweets = (tweets) => {
-    //empty old tweets object to avoid duplication
-    $('#tweets-container').text('');
-    tweets.map((tweet) => {
-      $('#tweets-container').prepend(createTweetElement(tweet));
-    });
-  };
-
-  $('#tweet-form').submit(function (e) {
-    e.preventDefault();
-
-    // validate data before posting
-    let tweetValue = $('#tweet-text').val().trim();
-    if (tweetValue === null || tweetValue.length === 0) {
-      return $('#error-msg').text('Please write something.').slideDown('fast');
-    } else if (tweetValue.length > 140) {
-      return $('#error-msg').text('Too long! Please limit your chars to 140').slideDown('fast');
-    }
-
-    const data = $(this).serialize();
-    $.post('/tweets', data).then(() => {
-      e.target.reset();
-      loadTweets();
-    });
-    $('.new-tweet').slideToggle('fast');
+const renderTweets = (tweets) => {
+  //empty old tweets object to avoid duplication
+  $('#tweets-container').text('');
+  tweets.map((tweet) => {
+    $('#tweets-container').prepend(createTweetElement(tweet));
   });
+};
 
-  const loadTweets = () => {
-    $.ajax('/tweets', { method: 'GET' }).then((tweetData) => {
-      // console.log(tweetData);
-      renderTweets(tweetData);
-    });
-  };
-  loadTweets();
-});
+const loadTweets = () => {
+  $.ajax('/tweets', { method: 'GET' }).then((tweetData) => {
+    // console.log(tweetData);
+    renderTweets(tweetData);
+  });
+};
