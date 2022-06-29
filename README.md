@@ -2,7 +2,7 @@
 
 Tweeter is a simple, single-page Twitter clone made by using HTML, CSS, JS, jQuery and AJAX on the front-end and Express on the back-end.
 
-## [🚀 Live demo](https://whispering-shore-50656.herokuapp.com/)
+## [🚀 Live demo](https://tweeter-singh.herokuapp.com/)
 
 
 ## Final Product
